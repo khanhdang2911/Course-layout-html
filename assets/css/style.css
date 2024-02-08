@@ -21,6 +21,7 @@ body{
 .header
 {
     background-color: #FFFCF4;
+    z-index: 1;
 }
 
 .header.fixed
@@ -40,6 +41,11 @@ body{
     min-width: 118px;
 
 
+}
+.btn:hover
+{
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 .header .body
@@ -96,5 +102,125 @@ a{
 {
     display: inline-block;
     margin-left: 49px;
+}
+
+
+/* ====================Main===================== */
+.hero{
+    background-color:#FFFCF4 ;
+    padding-top: 56px;
+}
+
+.item{
+    width: 170px;
+    display: flex;
+    /* position: absolute; */
+   
+}
+
+
+main .body
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+main .media-block
+{
+    position: relative;
+    width: 48%;
+}
+.hero-summary
+{
+    position: absolute;
+    height: 240px;
+    width: 220px;
+    background-color: #FFFFFF;
+    bottom: 48px;
+    right: 100px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.media-block>img
+{
+    width: 400px;
+    height: 685px;
+    object-fit: cover;
+}
+
+.info .title
+{
+    font-weight: 700;
+}
+.info .label
+{
+    line-height: 26px;
+    font-size: 14px;
+}
+main .content-block
+{
+    width: 52%;
+    height: 558px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+
+}
+main .content-block h1{
+    font-family: 'Sen', sans-serif;
+    height: 204px;
+    width: 510px;
+    font-size: 60px;
+    font-weight: 700;
+    padding:20px 0;
+}
+main .content-block p{
+    line-height: 30px;
+    font-size: 18px;
+
+}
+
+.button-content
+{
+    display: flex;
+    justify-content: flex-start;
+}
+.btn-See-Course
+{
+    background-color: #FFB900;
+    margin-top: 15px;
+}
+.Watch-video
+{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    margin-left: 10px;
+}
+.Watch-video:hover
+{
+    cursor: pointer;
+    opacity: 0.7;
+}
+.Watch-video img
+{
+    margin-top: 10px;
+}
+.soluong
+{
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.soluong span
+{
+    font-weight: 700;
+    font-size: 30px;
 }
 
