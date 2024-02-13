@@ -9,14 +9,26 @@ html{
 body{
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
-    height:10000vh;
 }
+
 .main-content{
     margin: 0 auto;
     max-width: calc(100% - 48px);
 
 }
-
+.line-clamp
+{
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    /* word-break: break-all; */
+}
+.line-clamp.line-2
+{
+    --line-clamp: 2;
+    
+}
 /* Header */
 .header
 {
@@ -29,6 +41,8 @@ body{
     position: sticky;
     top:-28px;
 }
+
+
 .btn{
     display: inline-block;
     color:white;
@@ -39,8 +53,6 @@ body{
     font-size: 1.6rem;
     height: 50px;
     min-width: 118px;
-
-
 }
 .btn:hover
 {
@@ -93,7 +105,7 @@ a{
     height: 2px;
     border-radius: 1px;
     background-color: black;
-    left: 22px;
+    left: 20px;
 }
 .nav li.active a{
     text-shadow: 1px 0 0 black;
@@ -111,6 +123,16 @@ a{
     padding-top: 56px;
 }
 
+.hero .body
+{
+    width: 80%;
+    margin-left: 4%;
+}
+
+.hero .body .media-block>img
+{
+    border-radius: 15px;
+}
 .item{
     width: 170px;
     display: flex;
@@ -138,7 +160,7 @@ main .media-block
     width: 220px;
     background-color: #FFFFFF;
     bottom: 48px;
-    right: 100px;
+    right: 0px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -168,6 +190,7 @@ main .content-block
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin-left: 20%;
 
 
 }
@@ -236,21 +259,30 @@ main .content-block p{
 /* ===================================================== */
 
 /* popular heading */
+
 .popular
 {
     padding: 65px;
     margin-top: 135px;
 }
+
+
 .popular .popular-heading
 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+
 }
+
+
 .popular .popular-heading .heading-text
 {
-    width: 458px;
+    width: 500px;
     height: 124px;
+    margin-right: 180px;
+
 }
 
 
@@ -281,6 +313,530 @@ main .content-block p{
     color:white
 }
 
+/* Main Polular */
+.popular
+{
+    margin-left: 4%;
+    margin-right: 2%;
+}
+.popular .popular-main
+{
+    padding-top:50px;
+}
+.popular .main-content
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 55px;
+}
+
+.popular .main-content .courses
+{
+    border-radius: 15px;
+    box-shadow: 0px 18px 36px 0px #0000000D;
+    border: 1px solid rgb(212, 210, 210);
+    flex: 1;
+
+}
+
+.popular .main-content .courses>img
+{
+    width: 370px;
+    height: 278px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.popular .main-content .courses  h3
+{
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    color:black
+
+}
+.popular .main-content .courses .Detail-courseName
+{
+    display: flex;
+    justify-content: space-between;
+}
+.popular .main-content .star
+{
+    margin-right: 45px;
+}
+.popular .main-content .Course-explain
+{
+    margin-bottom: 25px;
+    margin-left: 5px;
+}
+.popular .main-content  .price-book
+{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.popular .main-content .price
+{
+    font-weight: 700;
+    font-size: 15px;
+    margin-left: 5px;
+}
+.popular .main-content .btn-book
+{
+    background-color: black;
+    margin-right: 50px;
+    margin-right: 25px;
+}
+.popular .main-content .btn-book:hover
+{
+    background-color: #FFB900;
+}
+/* Feedback */
+
+.feedback
+{
+    background-color: #2E2100;
+    color:white;
+    height: 380px;
+    margin-top: 100px;
+    position: relative;
+}
+
+.feedback>.body
+{
+    display: flex;
+    margin-left: 4%;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top:110px;
+    gap:20%
+}
+.feedback .profile
+{
+    width: 400px;
+}
+.feedback .profile .name
+{
+    font-family: Sen;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px;
+}
+.feedback .profile .course-studied
+{
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    color:#BFBCB2;
+}
+.feedback .profile .dot
+{
+    width: 6px;
+    height: 12px;
+    display: inline-block;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.feedback .profile .dot.active
+{
+    width: 6px;
+    height: 12px;
+    font-weight: 700;
+    cursor: context-menu;
+    color: #FFB900;
+}
+.feedback .feedback-text p
+{
+    width: 740px;
+    height: 160px;
+    font-family: Poppins;
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 40px;
+    margin-left: 30px;
+}
+
+
+/* Details */
+.detail .body
+{
+    padding:  100px 65px 0;
+    display: flex;
+    justify-content: space-around;
+}
+.detail .left-content
+{
+    width: 49%;
+    height: 438px;
+    display: flex;
+    gap: 30px;
+}
+
+.detail .img
+{
+    height: 404px;
+    width: 270px;
+}
+
+.detail .img1
+{
+    margin-top: 30px;
+}
+
+
+/* right-content detail */
+
+.detail .right-content
+{
+    width: 41%;
+    height: 438px;
+    padding: 30px;
+}
+
+.detail .right-content .title
+{
+    font-family: Sen;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 48px;
+}
+.detail .right-content .desc
+{
+    margin-top: 20px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+
+}
+.detail .right-content .btn
+{
+    margin-top: 30px;
+    background-color: #FFB900;
+}
+/* Details 2 */
+.detail2 .body
+{
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 65px 0;
+}
+.detail2 .left-content
+{
+    width: 49%;
+    height: 300px;
+    margin-right: 100px;
+}
+.detail2 .left-content .title
+{
+    font-family: Sen;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.detail2 .left-content .desc
+{
+    margin-top: 30px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+
+}
+
+.detail2 .left-content .btn
+{
+    margin-top: 20px;
+    background-color: #FFB900;
+}
+
+.detail2 .right-content .img
+{
+    width: 440px;
+}
+
+
+/* ===================blog================= */
+.blog
+{
+    margin-top: 135px;
+    padding: 96px 0;
+    background-color: #FFFCF4;
+}
+
+.blog .blog-top .title
+{
+    font-family: Sen;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+.blog .blog-top .desc
+{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    width: 448px;
+    height: 56px;
+    margin: 16px auto;
+}
+/* blog bottom */
+.blog .blog-bottom
+{
+    margin-top: 55px;
+    display: flex;
+    /* gap: 30px; */
+    justify-content: space-evenly;
+}
+.blog .blog-bottom .info
+{
+    width: calc(33.33% - 80px);
+    background-color: #FFF;
+    border-radius: 16px;
+}
+.blog .blog-bottom .info:hover
+{
+    box-shadow: 2px 2px rgb(236, 227, 227);
+    cursor: pointer;
+}
+.blog .blog-bottom .info .thumb
+{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+.blog .blog-bottom .info-detail
+{
+    padding: 20px 20px 28px;
+}
+
+.blog .blog-bottom .date
+{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+.blog .blog-bottom .date::before
+{
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: #FFB900;
+    display: inline-block;
+    border-radius: 50%;
+}
+.blog .blog-bottom .date::after
+{
+    content: "";
+    right: -27px;
+    height: 1px;
+    border-radius: 0.5px;
+    background: #E2DFDA;
+    position: absolute;
+    left:0;
+    top: 20px;
+}
+
+.blog .blog-bottom .desc
+{
+    margin-top: 15px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.blog .blog-bottom .btn
+{
+    margin-top: 10px;
+    background-color: #FFB900;
+    font-size: 13px;
+}
+
+
+.blog .dots
+{
+    margin-top: 8px;
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+}
+
+.blog .dots .dot
+{
+    width: 6px;
+    height: 6px;
+    background-color: #5F5B53;
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.blog .dots .dot:hover
+{
+    cursor: pointer;
+    background-color:#FFB900;
+}
+
+/* ==================Footer================ */
+/* ========================================*/
+/* ========================================*/
+/* ========================================*/
+/* ========================================*/
+
+footer
+{
+    background-color: #2E2100;
+    height: 428px;
+    color:#FFF;
+}
+footer .main-content
+{
+    height: 100%;
+}
+footer .content
+{
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    position: relative;
+
+}
+footer .content::after
+{
+    content: "";
+    height: 1px;
+    width: 100%;
+    border-radius: 50%;
+    background-color: #5F5B53;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+}
+footer .desc
+{
+    margin-top: 15px;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #BFBCB2;
+    max-width: 267px;
+}
+
+footer .company .desc, footer .support .desc
+{
+    cursor: pointer;
+}
 
 
 
+
+footer .special .title
+{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+    position: relative;
+}
+footer .special .title::after
+{
+    content: "";
+    height: 1px;
+    border-radius: 50%;
+    width: 130px;
+    background-color: #5F5B53;
+    position: absolute;
+    left: 0;
+    top: 30px;
+
+}
+
+footer .lesson
+{
+    width: 23%;
+    height: 165px;
+    margin-top: 60px;
+}
+footer .lesson .title
+{
+    font-family: Sen;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px;
+}
+footer .lesson .title span
+{
+    color: #FFB900;
+}
+footer .lesson .desc
+{
+    margin-top: 15px;
+}
+footer .lesson .icon a
+{
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+
+footer .company
+{
+    width: 11.15%;
+    height: 211px;
+    margin-top: 60px;
+
+}
+
+
+footer .support
+{
+    width: 12%;
+    height: 211px;
+    margin-top: 60px;
+
+}
+footer .address
+{
+    width: 20%;
+    height: 200px;
+    margin-top: 60px;
+
+}
+footer .address strong
+{
+    font-weight: 600;
+    color:#FFF
+}
+
+
+footer .Copyright
+{
+    text-align: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #807D74;
+    margin-top: 30px;
+}
